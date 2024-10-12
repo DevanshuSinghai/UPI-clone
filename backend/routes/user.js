@@ -114,4 +114,11 @@ router.get("/bulk", authMiddleware, async(req, res)=>{
     })
 })
 
+// used to navigate user directly to dashboard if user already signedup or logged in before
+router.get("/check", authMiddleware, (req,res)=>{
+    res.json({
+        success: "true"
+    })
+})
+
 module.exports = router
